@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class TemperatureConverter {
 
     public static double convertTemperature(double temperature, String unit){
@@ -25,8 +27,9 @@ public class TemperatureConverter {
             else {
                 double temperature = Double.parseDouble(tempInput);
                 System.out.print("Enter the unit (C or F): ");
+                String unit = input.nextLine();
 
-                if (!unit.equalsIgnoreCase("C") & !unit.equalsIgnoreCase("F")){
+                if (!unit.equalsIgnoreCase("C") && !unit.equalsIgnoreCase("F")){
                     System.out.println("Error: Invalid unit. Please enter C or F.");
                 }
                 else {
